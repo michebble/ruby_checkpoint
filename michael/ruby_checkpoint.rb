@@ -4,7 +4,9 @@
 # "Would you take this rose, `person`, in exchange for giving an old beggar woman shelter from the bitter cold?"
 # Type your solution directly below this line:
 
-
+def offer_rose  (person)
+  puts "Would you take this rose, #{person}, in exchange for giving an old beggar woman shelter from the bitter cold?"
+end
 
 
 
@@ -26,7 +28,8 @@ town = {
 # - Add "Belle" to the `guests` array
 # Type your solution directly below this line:
 
-
+traveller = town[:residents].select! { |name| name == "Belle"}
+town[:castle][:guests] = traveller
 
 
 
@@ -44,8 +47,9 @@ friends = ["Chip Potts", "Cogsworth", "Lumière", "Mrs. Potts"]
 # "Belle is friends with Mrs. Potts"
 # Type your solution directly below this line:
 
-
-
+friends.each do |name|
+  puts "Belle is friends with #{name}"
+end
 
 # Question 4
 # Assume the following array of hashes:
@@ -62,6 +66,9 @@ lost_boys = [
 # 30 years.
 # Type your solution directly below this line:
 
+lost_boys.each do |boy|
+  boy[:age] += 30
+end
 
 
 
@@ -76,3 +83,6 @@ children = ['Wendy', 'John', 'Michael']
 # of their names. Assign the returned array to a variable called `darling_children`.
 # Example: `Wendy` should become `Wendy Darling` in the new array.
 # Type your solution directly below this line:
+
+darling_children = children.map { |name| name + " Darling"}
+
